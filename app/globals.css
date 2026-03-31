@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* NBL Custom Fonts */
+@font-face {
+  font-family: "NBL20";
+  src:
+    url("/fonts/Nbl20-Regular.ttf") format("truetype"),
+    url("/fonts/Nbl20-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  /* NBL 5V5 Design Tokens */
+  --nbl-bg: #0f0f0f;
+  --nbl-surface: #1a1a1a;
+  --nbl-surface-raised: #242424;
+  --nbl-orange: #d96813;
+  --nbl-orange-dark: #b8570f;
+  --nbl-orange-muted: rgba(217, 104, 19, 0.15);
+  --nbl-green: #2e6930;
+  --nbl-green-dark: #245427;
+  --nbl-green-muted: rgba(46, 105, 48, 0.15);
+  --nbl-white: #f0ede8;
+  --nbl-gray: #8a8a8a;
+  --nbl-border: rgba(255, 255, 255, 0.08);
+
+  /* shadcn tokens remapped to NBL dark theme */
+  --background: #0f0f0f;
+  --foreground: #f0ede8;
+  --card: #1a1a1a;
+  --card-foreground: #f0ede8;
+  --popover: #1a1a1a;
+  --popover-foreground: #f0ede8;
+  --primary: #d96813;
+  --primary-foreground: #0f0f0f;
+  --secondary: #242424;
+  --secondary-foreground: #f0ede8;
+  --muted: #242424;
+  --muted-foreground: #8a8a8a;
+  --accent: #d96813;
+  --accent-foreground: #0f0f0f;
+  --destructive: #cc2222;
+  --destructive-foreground: #f0ede8;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #242424;
+  --ring: #d96813;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #f0ede8;
+  --card: #1a1a1a;
+  --card-foreground: #f0ede8;
+}
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-nbl: "NBL20", system-ui, sans-serif;
+  --font-akira: var(--font-bebas), "Bebas Neue", system-ui, sans-serif;
+  --font-barlow: var(--font-barlow-cond), "Barlow Condensed", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* NBL Custom Colors */
+  --color-nbl-bg: var(--nbl-bg);
+  --color-nbl-surface: var(--nbl-surface);
+  --color-nbl-surface-raised: var(--nbl-surface-raised);
+  --color-nbl-orange: var(--nbl-orange);
+  --color-nbl-orange-dark: var(--nbl-orange-dark);
+  --color-nbl-orange-muted: var(--nbl-orange-muted);
+  --color-nbl-green: var(--nbl-green);
+  --color-nbl-green-dark: var(--nbl-green-dark);
+  --color-nbl-green-muted: var(--nbl-green-muted);
+  --color-nbl-white: var(--nbl-white);
+  --color-nbl-gray: var(--nbl-gray);
+  --color-nbl-border: var(--nbl-border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-nbl-bg text-nbl-white;
+    font-family: var(--font-sans);
+  }
+
+  /* Score / display numbers */
+  .score-display {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Live pulse animation */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.live-dot {
+  animation: live-pulse 1.2s ease-in-out infinite;
+}
+
+/* Score bump animation */
+@keyframes score-bump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.score-bump {
+  animation: score-bump 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* GSAP initial state for reveal animations */
+[data-gsap="heading"],
+[data-gsap="card"],
+[data-gsap="fade-up"] {
+  will-change: transform, opacity;
+}
