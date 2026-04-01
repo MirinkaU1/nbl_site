@@ -13,7 +13,7 @@ const stats = [
 
 export function HomeHero() {
   return (
-    <section className="relative min-h-[580px] lg:min-h-[700px] flex flex-col items-center justify-center overflow-hidden lg:rounded-2xl lg:mx-8 lg:mt-8 text-center px-5 lg:px-10 py-16">
+    <section className="relative min-h-145 lg:min-h-175 flex flex-col items-center justify-center overflow-hidden lg:rounded-2xl lg:mx-8 lg:mt-8 text-center px-5 lg:px-10 py-16">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
@@ -23,8 +23,8 @@ export function HomeHero() {
           className="object-cover object-top scale-105"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-nbl-bg/80 via-nbl-bg/60 to-nbl-bg" />
-        <div className="absolute inset-0 bg-gradient-to-r from-nbl-bg/50 via-transparent to-nbl-bg/50" />
+        <div className="absolute inset-0 bg-linear-to-b from-nbl-bg/80 via-nbl-bg/60 to-nbl-bg" />
+        <div className="absolute inset-0 bg-linear-to-r from-nbl-bg/50 via-transparent to-nbl-bg/50" />
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{
@@ -36,8 +36,8 @@ export function HomeHero() {
       </div>
 
       {/* Ambient glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-nbl-orange/10 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[280px] h-[280px] rounded-full bg-nbl-green/10 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 rounded-full bg-nbl-orange/10 blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-70 h-70 rounded-full bg-nbl-green/10 blur-[100px] pointer-events-none" />
 
       {/* Content */}
       <div className="relative flex flex-col items-center gap-7 max-w-2xl">

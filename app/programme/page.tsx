@@ -71,7 +71,7 @@ export default function ProgrammePage() {
     <div className="min-h-screen bg-nbl-bg flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-8 w-full">
         {/* Header */}
         <div className="mb-10 lg:mb-14">
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
@@ -94,7 +94,7 @@ export default function ProgrammePage() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-[28px] lg:left-[36px] top-0 bottom-0 w-px bg-nbl-border" />
+          <div className="absolute left-7 lg:left-9 top-0 bottom-0 w-px bg-nbl-border" />
 
           <div className="flex flex-col gap-8 lg:gap-12">
             {schedule.map((item, i) => {
@@ -104,7 +104,7 @@ export default function ProgrammePage() {
                 <div key={i} className="relative flex gap-6 lg:gap-10">
                   {/* Icon dot */}
                   <div
-                    className={`relative z-10 shrink-0 w-14 h-14 lg:w-[72px] lg:h-[72px] rounded-2xl flex items-center justify-center shadow-lg ${
+                    className={`relative z-10 shrink-0 w-14 h-14 lg:w-18 lg:h-18 rounded-2xl flex items-center justify-center shadow-lg ${
                       isOrange
                         ? "bg-nbl-orange/20 border border-nbl-orange/40 shadow-[0_0_20px_rgba(217,104,19,0.2)]"
                         : "bg-nbl-green/20 border border-nbl-green/40 shadow-[0_0_20px_rgba(46,105,48,0.2)]"

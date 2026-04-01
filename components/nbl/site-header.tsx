@@ -52,7 +52,7 @@ export function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-nbl-bg/95 backdrop-blur-md border-b border-nbl-border">
-        <div className="max-w-screen-xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
           <NBLLogo />
 
           {/* Desktop nav — centered */}

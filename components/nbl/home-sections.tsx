@@ -192,7 +192,7 @@ export function HomePartenaires() {
     <section className="px-4 lg:px-0 py-10 lg:py-14">
       <div data-gsap="fade-up" className="relative rounded-2xl overflow-hidden">
         {/* BG layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-nbl-green/20 via-nbl-surface to-nbl-orange/15" />
+        <div className="absolute inset-0 bg-linear-to-br from-nbl-green/20 via-nbl-surface to-nbl-orange/15" />
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -312,7 +312,7 @@ export function HomeNews() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
               {/* Tag */}
               <span className="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-nbl-orange text-nbl-bg text-[10px] font-black tracking-widest uppercase">
                 {item.tag}

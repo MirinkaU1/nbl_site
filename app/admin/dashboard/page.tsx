@@ -228,7 +228,7 @@ export default function AdminDashboardPage() {
         </Link>
       </header>
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-6 pb-12 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-6 pb-12 w-full">
         {/* Page title */}
         <div className="mb-6">
           <h1 className="text-2xl font-black uppercase tracking-tight text-nbl-white">

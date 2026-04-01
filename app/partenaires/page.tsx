@@ -36,7 +36,7 @@ export default function PartenairesPage() {
     <div className="min-h-screen bg-nbl-bg flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-8 w-full">
         {/* Header */}
         <div className="mb-10">
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">

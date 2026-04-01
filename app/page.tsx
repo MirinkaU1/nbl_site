@@ -1,11 +1,17 @@
-import { LiveTicker } from "@/components/nbl/live-ticker"
-import { HomeHero } from "@/components/nbl/home-hero"
-import { HomeProgramme, HomeNumbers, HomeMatches, HomePartenaires, HomeNews } from "@/components/nbl/home-sections"
-import { MvpRace } from "@/components/nbl/home-hero"
-import { BottomNav } from "@/components/nbl/bottom-nav"
-import { SiteHeader } from "@/components/nbl/site-header"
-import { SiteFooter } from "@/components/nbl/site-footer"
-import { HomeAnimations } from "@/components/nbl/home-animations"
+import { LiveTicker } from "@/components/nbl/live-ticker";
+import { HomeHero } from "@/components/nbl/home-hero";
+import {
+  HomeProgramme,
+  HomeNumbers,
+  HomeMatches,
+  HomePartenaires,
+  HomeNews,
+} from "@/components/nbl/home-sections";
+import { MvpRace } from "@/components/nbl/home-hero";
+import { BottomNav } from "@/components/nbl/bottom-nav";
+import { SiteHeader } from "@/components/nbl/site-header";
+import { SiteFooter } from "@/components/nbl/site-footer";
+import { HomeAnimations } from "@/components/nbl/home-animations";
 
 export default function HomePage() {
   return (
@@ -19,12 +25,11 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* ── Hero ──────────────────────────────────────────── */}
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <HomeHero />
         </div>
 
-        <div className="max-w-screen-xl mx-auto px-0 lg:px-8">
-
+        <div className="max-w-7xl mx-auto px-0 lg:px-8">
           {/* ── Chiffres clés ─────────────────────────────── */}
           <HomeNumbers />
 
@@ -51,7 +56,6 @@ export default function HomePage() {
 
           {/* ── Actualités ────────────────────────────────── */}
           <HomeNews />
-
         </div>
       </main>
 
@@ -59,5 +63,5 @@ export default function HomePage() {
       <BottomNav />
       <HomeAnimations />
     </div>
-  )
+  );
 }

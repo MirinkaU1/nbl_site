@@ -571,7 +571,7 @@ export default function AdminConsolePage() {
       </div>
 
       {/* ─── Floating undo button ─────────────────────────────────────────────── */}
-      <div className="fixed bottom-0 inset-x-0 px-4 pb-5 pt-3 bg-gradient-to-t from-nbl-bg via-nbl-bg/90 to-transparent z-40">
+      <div className="fixed bottom-0 inset-x-0 px-4 pb-5 pt-3 bg-linear-to-t from-nbl-bg via-nbl-bg/90 to-transparent z-40">
         <div className="max-w-3xl mx-auto flex gap-3">
           {/* Cancel pending */}
           {pendingAction && (

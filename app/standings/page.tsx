@@ -18,7 +18,7 @@ function StandingsTable() {
   return (
     <div className="rounded-2xl bg-nbl-surface border border-nbl-border overflow-hidden">
       {/* Table header */}
-      <div className="grid grid-cols-[auto_1fr_repeat(6,_auto)] gap-x-4 px-4 py-3 border-b border-nbl-border">
+      <div className="grid grid-cols-[auto_1fr_repeat(6,auto)] gap-x-4 px-4 py-3 border-b border-nbl-border">
         <span className="text-[10px] font-black tracking-widest text-nbl-gray uppercase w-6 text-center">
           #
         </span>
@@ -52,7 +52,7 @@ function StandingsTable() {
           <div
             key={row.team.id}
             className={cn(
-              "grid grid-cols-[auto_1fr_repeat(6,_auto)] gap-x-4 px-4 py-3 items-center transition-colors hover:bg-nbl-surface-raised",
+              "grid grid-cols-[auto_1fr_repeat(6,auto)] gap-x-4 px-4 py-3 items-center transition-colors hover:bg-nbl-surface-raised",
               idx !== STANDINGS.length - 1 && "border-b border-nbl-border",
               isFirst && "bg-nbl-orange/5",
             )}
@@ -192,7 +192,7 @@ function TopScorersBoard({ allTime = false }: { allTime?: boolean }) {
             </div>
 
             {/* Matches */}
-            <div className="flex flex-col items-end shrink-0 hidden sm:flex">
+            <div className="flex-col items-end shrink-0 hidden sm:flex">
               <span className="text-sm font-black text-nbl-white">
                 {allTime ? ts.player.careerMatches : ts.matches}
               </span>
@@ -228,7 +228,7 @@ export default function StandingsPage() {
 
       {/* Sticky sub-header */}
       <div className="sticky top-16 z-30 border-b border-nbl-border bg-nbl-bg/95 backdrop-blur-md">
-        <div className="max-w-screen-xl mx-auto px-4 lg:px-8 flex items-center justify-between py-4 gap-4">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between py-4 gap-4">
           <div className="flex items-center gap-2">
             <TrendingUp size={18} className="text-nbl-orange" />
             <h1 className="font-black text-base tracking-widest uppercase text-nbl-white">
@@ -254,7 +254,7 @@ export default function StandingsPage() {
         </div>
       </div>
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-6 pb-28 lg:pb-12 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-6 pb-28 lg:pb-12 w-full">
         {activeTab === "CLASSEMENT" && (
           <div className="lg:grid lg:grid-cols-[1fr_320px] lg:gap-8">
             <div>

@@ -140,7 +140,7 @@ export default function InscriptionPage() {
     <div className="min-h-screen bg-nbl-bg flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-8 w-full">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="mb-8">
