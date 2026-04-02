@@ -53,9 +53,9 @@ export function HomeProgramme() {
           <p className="text-nbl-orange text-[10px] font-black tracking-widest uppercase mb-1">
             Juillet 2026 · Abidjan
           </p>
-          <h2 className="font-barlow font-bold text-3xl lg:text-4xl uppercase text-nbl-white leading-none">
-            Programme de la journée
-          </h2>
+          <h1 className="font-kianda text-3xl lg:text-4xl text-nbl-white leading-none tracking-tight">
+            programme de la journée
+          </h1>
         </div>
         <Link
           href="/programme"
@@ -171,7 +171,7 @@ export function HomeNumbers() {
             data-gsap-parent="numbers"
             className="rounded-2xl bg-nbl-surface border border-nbl-border p-5 lg:p-6 flex flex-col gap-1"
           >
-            <span className="font-barlow font-black text-5xl lg:text-6xl text-nbl-orange leading-none">
+            <span className="font-kianda font-black text-5xl lg:text-6xl text-nbl-orange leading-none tracking-tight">
               {n.value}
             </span>
             <span className="font-black text-sm text-nbl-white uppercase tracking-wide">

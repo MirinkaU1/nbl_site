@@ -105,11 +105,11 @@ function LiveMatchCard({ match }: { match: LivePublicMatch }) {
           </div>
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-3">
-              <span className="text-5xl font-black text-nbl-white score-display">
+              <span className="font-kianda tracking-tight text-5xl font-black text-nbl-white score-display">
                 {match.homeTeam.score}
               </span>
               <span className="text-nbl-orange font-black text-2xl">—</span>
-              <span className="text-5xl font-black text-nbl-white score-display">
+              <span className="font-kianda tracking-tight text-5xl font-black text-nbl-white score-display">
                 {match.awayTeam.score}
               </span>
             </div>
@@ -185,8 +185,8 @@ export default function MatchesPage() {
       <div className="border-b border-nbl-border bg-nbl-bg/95 backdrop-blur-md sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between py-4 gap-4">
           <div className="flex items-center gap-2">
-            <h1 className="font-black text-base tracking-widest uppercase text-nbl-white">
-              Match Center
+            <h1 className="font-kianda tracking-tight text-4xl lg:text-5xl text-nbl-white leading-none">
+              match center
             </h1>
             <span
               className={cn(
@@ -354,7 +354,7 @@ export default function MatchesPage() {
                       <div className="flex items-center gap-2">
                         <span
                           className={cn(
-                            "text-2xl font-black score-display",
+                            "font-kianda tracking-tight text-2xl font-black score-display",
                             winner === "home"
                               ? "text-nbl-orange"
                               : "text-nbl-gray",
@@ -365,7 +365,7 @@ export default function MatchesPage() {
                         <span className="text-nbl-gray text-sm">—</span>
                         <span
                           className={cn(
-                            "text-2xl font-black score-display",
+                            "font-kianda tracking-tight text-2xl font-black score-display",
                             winner === "away"
                               ? "text-nbl-orange"
                               : "text-nbl-gray",

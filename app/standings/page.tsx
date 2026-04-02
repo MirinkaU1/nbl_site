@@ -240,9 +240,8 @@ export default function StandingsPage() {
       <div className="sticky top-16 z-30 border-b border-nbl-border bg-nbl-bg/95 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between py-4 gap-4">
           <div className="flex items-center gap-2">
-            <TrendingUp size={18} className="text-nbl-orange" />
-            <h1 className="font-black text-base tracking-widest uppercase text-nbl-white">
-              Classement
+            <h1 className="font-kianda tracking-tight text-4xl lg:text-5xl text-nbl-white leading-none">
+              classement
             </h1>
             <span
               className={cn(

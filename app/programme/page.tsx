@@ -76,7 +76,7 @@ export default function ProgrammePage() {
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
             Édition 1 · Juillet 2026
           </p>
-          <h1 className="font-akira text-4xl lg:text-5xl uppercase text-nbl-white leading-none mb-3">
+          <h1 className="font-kianda tracking-tight text-4xl lg:text-5xl text-nbl-white leading-none mb-3">
             Programme
             <br />
             <span className="text-nbl-orange">de la journée</span>

@@ -72,19 +72,19 @@ export function HomeHero() {
           <span className="text-xs font-semibold text-nbl-gray">Abidjan</span>
         </div>
 
-        {/* Headline — NBL20 font pour le nom officiel */}
+        {/* Headline */}
         <div className="flex flex-col items-center gap-0">
           <h1
             data-gsap="hero-line"
-            className="font-nbl text-5xl lg:text-7xl uppercase leading-[0.9] tracking-tight text-nbl-white"
+            className="font-kianda text-5xl lg:text-7xl leading-[0.9] tracking-tight text-nbl-white"
           >
-            <span className="text-nbl-orange">National</span> Basketball
+            <span className="text-nbl-orange">national</span> basketball
           </h1>
           <h1
             data-gsap="hero-line"
-            className="font-nbl text-5xl lg:text-7xl uppercase leading-[0.9] tracking-tight text-nbl-green"
+            className="font-kianda text-5xl lg:text-7xl leading-[0.9] tracking-tight text-nbl-green"
           >
-            Leaders.
+            leaders.
           </h1>
         </div>
 
