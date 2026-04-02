@@ -61,13 +61,13 @@ export function SiteFooter() {
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
-          backgroundImage: "url('/logo/patern_2.png')",
+          backgroundImage: "url('/patern/patern_2.png')",
           backgroundSize: "300px",
           backgroundRepeat: "repeat",
         }}
       />
 
-      <div className="relative max-w-screen-xl mx-auto px-4 lg:px-8 py-12">
+      <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-12">
         {/* Main grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.2fr] gap-10">
           {/* Brand column */}

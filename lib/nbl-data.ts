@@ -288,7 +288,7 @@ export const MATCHES: Record<string, Match> = {
   "match-1": {
     id: "match-1",
     status: "live",
-    quarter: "Q4",
+    quarter: "H2",
     clockSeconds: 261,
     homeState: heatState,
     awayState: treichvilleState,
@@ -300,7 +300,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e1",
         matchId: "match-1",
-        quarter: "Q1",
+        quarter: "H1",
         clockSeconds: 580,
         type: "pts2",
         value: 2,
@@ -314,7 +314,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e2",
         matchId: "match-1",
-        quarter: "Q1",
+        quarter: "H1",
         clockSeconds: 540,
         type: "pts3",
         value: 3,
@@ -328,7 +328,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e3",
         matchId: "match-1",
-        quarter: "Q2",
+        quarter: "H1",
         clockSeconds: 460,
         type: "pts2",
         value: 2,
@@ -342,7 +342,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e4",
         matchId: "match-1",
-        quarter: "Q2",
+        quarter: "H1",
         clockSeconds: 390,
         type: "foul",
         value: 0,
@@ -356,7 +356,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e5",
         matchId: "match-1",
-        quarter: "Q3",
+        quarter: "H2",
         clockSeconds: 520,
         type: "pts3",
         value: 3,
@@ -370,7 +370,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e6",
         matchId: "match-1",
-        quarter: "Q3",
+        quarter: "H2",
         clockSeconds: 200,
         type: "pts2",
         value: 2,
@@ -384,7 +384,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e7",
         matchId: "match-1",
-        quarter: "Q4",
+        quarter: "H2",
         clockSeconds: 480,
         type: "pts2",
         value: 2,
@@ -398,7 +398,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e8",
         matchId: "match-1",
-        quarter: "Q4",
+        quarter: "H2",
         clockSeconds: 350,
         type: "foul",
         value: 0,
@@ -412,7 +412,7 @@ export const MATCHES: Record<string, Match> = {
       {
         id: "e9",
         matchId: "match-1",
-        quarter: "Q4",
+        quarter: "H2",
         clockSeconds: 261,
         type: "pts3",
         value: 3,
@@ -428,7 +428,7 @@ export const MATCHES: Record<string, Match> = {
   "match-2": {
     id: "match-2",
     status: "upcoming",
-    quarter: "Q1",
+    quarter: "H1",
     clockSeconds: 600,
     homeState: {
       team: TEAMS.vipers,
@@ -455,7 +455,7 @@ export const MATCHES: Record<string, Match> = {
   "match-3": {
     id: "match-3",
     status: "live",
-    quarter: "Q2",
+    quarter: "H1",
     clockSeconds: 480,
     homeState: {
       team: TEAMS.dunksquad,

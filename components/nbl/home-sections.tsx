@@ -158,7 +158,7 @@ export function HomeNumbers() {
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
-          backgroundImage: "url('/logo/patern_2.png')",
+          backgroundImage: "url('/patern/patern_2.png')",
           backgroundSize: "220px",
           backgroundRepeat: "repeat",
         }}
@@ -196,7 +196,7 @@ export function HomePartenaires() {
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
-            backgroundImage: "url('/logo/patern_1.png')",
+            backgroundImage: "url('/patern/patern_1.png')",
             backgroundSize: "160px",
             backgroundRepeat: "repeat",
           }}

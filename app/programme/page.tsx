@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
-import { BottomNav } from "@/components/nbl/bottom-nav";
 import { MapPin, Clock, Music, Trophy, Zap, Star } from "lucide-react";
 
 const schedule = [
@@ -194,7 +193,6 @@ export default function ProgrammePage() {
       </main>
 
       <SiteFooter />
-      <BottomNav />
     </div>
   );
 }

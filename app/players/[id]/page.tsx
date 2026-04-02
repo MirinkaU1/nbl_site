@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { PLAYERS, TEAMS, TOP_SCORERS } from "@/lib/nbl-data";
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
-import { BottomNav } from "@/components/nbl/bottom-nav";
 
 // ─── Stat tile ────────────────────────────────────────────────────────────────
 
@@ -58,7 +57,7 @@ function EditionRow({
   fouls: number;
 }) {
   return (
-    <div className="grid grid-cols-[1fr_repeat(4,_auto)] gap-x-6 items-center px-4 py-3 rounded-xl bg-nbl-surface border border-nbl-border">
+    <div className="grid grid-cols-[1fr_repeat(4,auto)] gap-x-6 items-center px-4 py-3 rounded-xl bg-nbl-surface border border-nbl-border">
       <span className="text-sm font-black text-nbl-white">{edition}</span>
       <div className="flex flex-col items-center">
         <span className="text-base font-black text-nbl-orange score-display">
@@ -116,7 +115,7 @@ export default function PlayerProfilePage({
     <div className="min-h-screen bg-nbl-bg flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 pb-28 lg:pb-12">
+      <main className="flex-1 pb-12">
         {/* Hero section */}
         <div className="relative bg-nbl-surface border-b border-nbl-border overflow-hidden">
           {/* Subtle radial glow */}
@@ -127,7 +126,7 @@ export default function PlayerProfilePage({
             }}
           />
 
-          <div className="relative max-w-screen-xl mx-auto px-4 lg:px-8 py-8">
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-8">
             {/* Back link */}
             <Link
               href="/standings"
@@ -201,7 +200,7 @@ export default function PlayerProfilePage({
         </div>
 
         {/* Stats grid + history */}
-        <div className="max-w-screen-xl mx-auto px-4 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
           <div className="lg:grid lg:grid-cols-[1fr_320px] lg:gap-10">
             {/* Left — season stats + history */}
             <div className="flex flex-col gap-8">
@@ -292,7 +291,6 @@ export default function PlayerProfilePage({
       </main>
 
       <SiteFooter />
-      <BottomNav />
     </div>
   );
 }

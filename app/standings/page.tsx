@@ -1,20 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Trophy, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { STANDINGS, TOP_SCORERS } from "@/lib/nbl-data";
+import { TOP_SCORERS } from "@/lib/nbl-data";
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
-import { BottomNav } from "@/components/nbl/bottom-nav";
+import { useLiveOverview } from "@/hooks/use-live-overview";
+import type { StandingsRow, TopScorer } from "@/lib/nbl-types";
 
 const TABS = ["CLASSEMENT", "TOP SCORERS", "ALL-TIME"] as const;
 type StandingsTab = (typeof TABS)[number];
 
 // ─── Standings table ──────────────────────────────────────────────────────────
 
-function StandingsTable() {
+function StandingsTable({ rows }: { rows: StandingsRow[] }) {
   return (
     <div className="rounded-2xl bg-nbl-surface border border-nbl-border overflow-hidden">
       {/* Table header */}
@@ -45,7 +46,7 @@ function StandingsTable() {
         </span>
       </div>
 
-      {STANDINGS.map((row, idx) => {
+      {rows.map((row, idx) => {
         const isTop4 = row.rank <= 4;
         const isFirst = row.rank === 1;
         return (
@@ -53,7 +54,7 @@ function StandingsTable() {
             key={row.team.id}
             className={cn(
               "grid grid-cols-[auto_1fr_repeat(6,auto)] gap-x-4 px-4 py-3 items-center transition-colors hover:bg-nbl-surface-raised",
-              idx !== STANDINGS.length - 1 && "border-b border-nbl-border",
+              idx !== rows.length - 1 && "border-b border-nbl-border",
               isFirst && "bg-nbl-orange/5",
             )}
           >
@@ -130,13 +131,13 @@ function StandingsTable() {
 
 // ─── Top Scorers leaderboard ──────────────────────────────────────────────────
 
-function TopScorersBoard({ allTime = false }: { allTime?: boolean }) {
-  const data = allTime
-    ? [...TOP_SCORERS].sort(
-        (a, b) => b.player.careerPoints - a.player.careerPoints,
-      )
-    : TOP_SCORERS;
-
+function TopScorersBoard({
+  data,
+  allTime = false,
+}: {
+  data: TopScorer[];
+  allTime?: boolean;
+}) {
   return (
     <div className="flex flex-col gap-3">
       {data.map((ts, idx) => {
@@ -221,6 +222,15 @@ function TopScorersBoard({ allTime = false }: { allTime?: boolean }) {
 
 export default function StandingsPage() {
   const [activeTab, setActiveTab] = useState<StandingsTab>("CLASSEMENT");
+  const { standings, topScorers, isConnected } = useLiveOverview(4000);
+
+  const allTimeScorers = useMemo(
+    () =>
+      [...TOP_SCORERS].sort(
+        (a, b) => b.player.careerPoints - a.player.careerPoints,
+      ),
+    [],
+  );
 
   return (
     <div className="min-h-screen bg-nbl-bg flex flex-col">
@@ -234,6 +244,16 @@ export default function StandingsPage() {
             <h1 className="font-black text-base tracking-widest uppercase text-nbl-white">
               Classement
             </h1>
+            <span
+              className={cn(
+                "px-2 py-1 rounded-lg text-[10px] font-black tracking-widest uppercase",
+                isConnected
+                  ? "bg-green-500/15 text-green-400 border border-green-500/30"
+                  : "bg-amber-500/15 text-amber-400 border border-amber-500/30",
+              )}
+            >
+              {isConnected ? "LIVE" : "FALLBACK"}
+            </span>
           </div>
           <div className="flex items-center gap-1">
             {TABS.map((tab) => (
@@ -254,14 +274,14 @@ export default function StandingsPage() {
         </div>
       </div>
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-6 pb-28 lg:pb-12 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-6 pb-12 w-full">
         {activeTab === "CLASSEMENT" && (
           <div className="lg:grid lg:grid-cols-[1fr_320px] lg:gap-8">
             <div>
               <p className="text-[10px] font-black tracking-widest text-nbl-orange uppercase mb-4">
                 Summer League 2026 — Saison régulière
               </p>
-              <StandingsTable />
+              <StandingsTable rows={standings} />
               <p className="text-[10px] text-nbl-gray mt-3 px-1">
                 Top 4 qualifiés pour les playoffs. PTS = points de tournoi (2
                 victoire, 0 défaite).
@@ -273,7 +293,7 @@ export default function StandingsPage() {
                 Top 5 marqueurs (édition)
               </p>
               <div className="flex flex-col gap-3">
-                {TOP_SCORERS.slice(0, 5).map((ts, idx) => (
+                {topScorers.slice(0, 5).map((ts, idx) => (
                   <Link
                     href={`/players/${ts.player.id}`}
                     key={ts.player.id}
@@ -306,7 +326,7 @@ export default function StandingsPage() {
             <p className="text-[10px] font-black tracking-widest text-nbl-orange uppercase mb-4">
               Meilleurs marqueurs — Summer League 2026
             </p>
-            <TopScorersBoard />
+            <TopScorersBoard data={topScorers} />
           </>
         )}
 
@@ -315,13 +335,12 @@ export default function StandingsPage() {
             <p className="text-[10px] font-black tracking-widest text-nbl-orange uppercase mb-4">
               Meilleurs marqueurs — Toutes éditions confondues
             </p>
-            <TopScorersBoard allTime />
+            <TopScorersBoard data={allTimeScorers} allTime />
           </>
         )}
       </main>
 
       <SiteFooter />
-      <BottomNav />
     </div>
   );
 }

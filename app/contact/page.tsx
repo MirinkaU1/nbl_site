@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
-import { BottomNav } from "@/components/nbl/bottom-nav";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import Link from "next/link";
 
@@ -24,7 +23,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-nbl-bg flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 max-w-screen-xl mx-auto px-4 lg:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 lg:px-8 py-8 w-full">
         {/* Header */}
         <div className="mb-10">
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
@@ -183,7 +182,6 @@ export default function ContactPage() {
       </main>
 
       <SiteFooter />
-      <BottomNav />
     </div>
   );
 }

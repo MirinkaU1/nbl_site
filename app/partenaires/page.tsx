@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
-import { BottomNav } from "@/components/nbl/bottom-nav";
 import { ArrowRight, Users, Eye, Megaphone, Star } from "lucide-react";
 import Link from "next/link";
 
@@ -111,7 +110,7 @@ export default function PartenairesPage() {
           <div
             className="absolute inset-0 opacity-[0.05] pointer-events-none"
             style={{
-              backgroundImage: "url('/logo/patern_2.png')",
+              backgroundImage: "url('/patern/patern_2.png')",
               backgroundSize: "200px",
               backgroundRepeat: "repeat",
             }}
@@ -144,7 +143,6 @@ export default function PartenairesPage() {
       </main>
 
       <SiteFooter />
-      <BottomNav />
     </div>
   );
 }

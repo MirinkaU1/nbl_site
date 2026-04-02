@@ -13,7 +13,7 @@ const stats = [
 
 export function HomeHero() {
   return (
-    <section className="relative min-h-145 lg:min-h-175 flex flex-col items-center justify-center overflow-hidden lg:rounded-2xl lg:mx-8 lg:mt-8 text-center px-5 lg:px-10 py-16">
+    <section className="relative min-h-145 lg:min-h-175 flex flex-col items-center justify-center overflow-hidden lg:rounded-2xl lg:mx-8 lg:mt-8 text-center font-sans px-5 lg:px-10 py-16">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
@@ -28,7 +28,7 @@ export function HomeHero() {
         <div
           className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
           style={{
-            backgroundImage: "url('/logo/patern_1.png')",
+            backgroundImage: "url('/patern/patern_1.png')",
             backgroundSize: "180px",
             backgroundRepeat: "repeat",
           }}
@@ -161,7 +161,7 @@ export function HomeHero() {
 
 export function MvpRace() {
   return (
-    <section className="px-4 pb-4">
+    <section className="px-4 pb-4 font-sans">
       <div
         data-gsap="slide-right"
         className="rounded-2xl bg-nbl-surface border border-nbl-border p-4 flex items-center gap-4 overflow-hidden relative"
@@ -169,7 +169,7 @@ export function MvpRace() {
         <div
           className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
-            backgroundImage: "url('/logo/patern_2.png')",
+            backgroundImage: "url('/patern/patern_2.png')",
             backgroundSize: "160px",
             backgroundRepeat: "repeat",
           }}

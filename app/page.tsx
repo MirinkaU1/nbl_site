@@ -8,7 +8,6 @@ import {
   HomeNews,
 } from "@/components/nbl/home-sections";
 import { MvpRace } from "@/components/nbl/home-hero";
-import { BottomNav } from "@/components/nbl/bottom-nav";
 import { SiteHeader } from "@/components/nbl/site-header";
 import { SiteFooter } from "@/components/nbl/site-footer";
 import { HomeAnimations } from "@/components/nbl/home-animations";
@@ -60,7 +59,6 @@ export default function HomePage() {
       </main>
 
       <SiteFooter />
-      <BottomNav />
       <HomeAnimations />
     </div>
   );
