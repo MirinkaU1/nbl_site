@@ -4,8 +4,8 @@ import {
   HomeProgramme,
   HomeNumbers,
   HomeMatches,
-  HomePartenaires,
   HomeNews,
+  HomeSponsors,
 } from "@/components/nbl/home-sections";
 import { MvpRace } from "@/components/nbl/home-hero";
 import { SiteHeader } from "@/components/nbl/site-header";
@@ -50,8 +50,8 @@ export default function HomePage() {
             <MvpRace />
           </div>
 
-          {/* ── Devenez partenaire ────────────────────────── */}
-          <HomePartenaires />
+          {/* ── Sponsors / Ils nous soutiennent ───────────── */}
+          <HomeSponsors />
 
           {/* ── Actualités ────────────────────────────────── */}
           <HomeNews />

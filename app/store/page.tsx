@@ -229,7 +229,7 @@ export default function StorePage() {
               <span className="inline-flex self-start items-center px-2 py-0.5 rounded-md bg-nbl-orange text-nbl-bg text-[10px] font-black tracking-widest uppercase mb-2">
                 New Drop
               </span>
-              <h2 className="text-2xl lg:text-4xl font-black uppercase leading-tight text-nbl-white text-balance">
+              <h2 className="font-kianda text-2xl lg:text-4xl leading-[0.9] tracking-tight text-nbl-white text-balance">
                 Street Kings
                 <br />
                 Collection

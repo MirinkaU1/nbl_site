@@ -567,7 +567,7 @@ export default function AdminDashboardPage() {
         </Link>
         <div className="flex items-center gap-2">
           <Image
-            src="/logo/logo_large.jpeg"
+            src="/logo/logo.png"
             alt="NBL"
             width={64}
             height={27}

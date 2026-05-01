@@ -44,7 +44,7 @@ export function HomeHero() {
         {/* Logo */}
         <div data-gsap="hero-badge">
           <Image
-            src="/logo/logo_large.jpeg"
+            src="/logo/logo.png"
             alt="National Basketball Leaders"
             width={220}
             height={92}
@@ -65,7 +65,7 @@ export function HomeHero() {
           <span className="w-px h-3 bg-nbl-border" />
           <Calendar size={11} className="text-nbl-orange" />
           <span className="text-xs font-semibold text-nbl-gray">
-            Juillet 2026
+            11 Août 2026
           </span>
           <span className="w-px h-3 bg-nbl-border" />
           <MapPin size={11} className="text-nbl-green" />
@@ -125,18 +125,18 @@ export function HomeHero() {
           {/* Primary — plein orange avec icône */}
           <Link
             href="/inscription"
-            className="group relative flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl bg-nbl-orange text-nbl-bg font-akira text-2xl tracking-normal uppercase overflow-hidden transition-all active:scale-[0.97] shadow-[0_8px_32px_rgba(217,104,19,0.5)]"
+            className="group relative flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl bg-nbl-orange text-nbl-bg font-kianda text-2xl tracking-tight overflow-hidden transition-all active:scale-[0.97] shadow-[0_8px_32px_rgba(217,104,19,0.5)]"
           >
             {/* Shine sweep */}
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
             {/* <Users size={32} className="shrink-0" /> */}
-            Inscrire mon equipe
+            Inscrire mon équipe
           </Link>
 
           {/* Secondary — contour avec glow au hover */}
           <Link
             href="/programme"
-            className="group flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl border-2 border-nbl-white/20 text-nbl-white font-akira text-2xl tracking-normal uppercase backdrop-blur-sm hover:border-nbl-orange hover:text-nbl-orange hover:shadow-[0_0_20px_rgba(217,104,19,0.25)] active:scale-[0.97] transition-all"
+            className="group flex-1 flex items-center justify-center gap-2 py-4 px-4 rounded-2xl border-2 border-nbl-white/20 text-nbl-white font-kianda text-2xl tracking-tight backdrop-blur-sm hover:border-nbl-orange hover:text-nbl-orange hover:shadow-[0_0_20px_rgba(217,104,19,0.25)] active:scale-[0.97] transition-all"
           >
             Programme
             <ArrowRight

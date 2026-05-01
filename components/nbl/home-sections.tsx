@@ -9,6 +9,7 @@ import {
   Users,
   MapPin,
   Clock,
+  Sparkles,
 } from "lucide-react";
 
 // ─── Programme snapshot ───────────────────────────────────────────────────────
@@ -30,7 +31,7 @@ const schedule = [
   },
   {
     time: "14h00",
-    label: "Phases finales",
+    label: "Playoff",
     sub: "QF · DF · Finales Junior & D1",
     icon: Trophy,
     color: "orange",
@@ -51,7 +52,7 @@ export function HomeProgramme() {
       <div data-gsap="heading" className="flex items-end justify-between mb-6">
         <div>
           <p className="text-nbl-orange text-[10px] font-black tracking-widest uppercase mb-1">
-            Juillet 2026 · Abidjan
+            11 Août 2026 · Abidjan
           </p>
           <h1 className="font-kianda text-3xl lg:text-4xl text-nbl-white leading-none tracking-tight">
             programme de la journée
@@ -85,7 +86,7 @@ export function HomeProgramme() {
             >
               {/* Big time watermark */}
               <span
-                className={`absolute -right-1 -top-3 font-barlow font-black text-7xl leading-none select-none pointer-events-none ${
+                className={`absolute -right-1 -top-3 font-kianda text-7xl leading-none select-none pointer-events-none tracking-tight ${
                   isOrange ? "text-nbl-orange/10" : "text-nbl-green/10"
                 }`}
               >
@@ -109,7 +110,7 @@ export function HomeProgramme() {
                 >
                   {item.time}
                 </p>
-                <p className="font-barlow font-bold text-2xl uppercase text-nbl-white leading-tight mt-0.5">
+                <p className="font-kianda text-2xl text-nbl-white leading-tight mt-0.5 tracking-tight">
                   {item.label}
                 </p>
                 <p className="text-nbl-gray text-xs mt-1 leading-snug">
@@ -146,7 +147,7 @@ export function HomeProgramme() {
 
 const numbers = [
   { value: "24", label: "Équipes", sub: "12 Junior + 12 D1" },
-  { value: "5v5", label: "Format", sub: "2 × 10 min / match" },
+  { value: "5v5", label: "Format", sub: "2 × 5 min / match" },
   { value: "1", label: "Journée", sub: "Du matin à la nuit" },
   { value: "∞", label: "Énergie", sub: "Street basketball pur" },
 ];
@@ -185,85 +186,206 @@ export function HomeNumbers() {
   );
 }
 
-// ─── Partenaires CTA ─────────────────────────────────────────────────────────
+// ─── Sponsors / Ils nous soutiennent ─────────────────────────────────────────
 
-export function HomePartenaires() {
+type Sponsor = {
+  name: string;
+  logo: string;
+  href?: string;
+  tier: "principal" | "officiel";
+  tagline?: string;
+};
+
+const sponsors: Sponsor[] = [
+  {
+    name: "Mr Yaourt",
+    logo: "/logo/sponsors/Mr_Yaourt.png",
+    tier: "principal",
+    tagline: "Partenaire officiel · Édition 1",
+  },
+];
+
+export function HomeSponsors() {
+  const principal = sponsors.find((s) => s.tier === "principal");
+  const officiels = sponsors.filter((s) => s.tier === "officiel");
+
   return (
-    <section className="px-4 lg:px-0 py-10 lg:py-14">
-      <div data-gsap="fade-up" className="relative rounded-2xl overflow-hidden">
-        {/* BG layers */}
-        <div className="absolute inset-0 bg-linear-to-br from-nbl-green/20 via-nbl-surface to-nbl-orange/15" />
-        <div
-          className="absolute inset-0 opacity-[0.06] pointer-events-none"
-          style={{
-            backgroundImage: "url('/patern/patern_1.png')",
-            backgroundSize: "160px",
-            backgroundRepeat: "repeat",
-          }}
-        />
-        {/* Glow */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-nbl-orange/20 blur-[80px] pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-nbl-green/20 blur-[80px] pointer-events-none" />
+    <section className="relative px-4 lg:px-0 py-12 lg:py-16 overflow-hidden">
+      {/* Court line — top */}
+      <div className="absolute top-0 left-4 right-4 lg:left-0 lg:right-0 h-px bg-linear-to-r from-transparent via-nbl-border to-transparent" />
 
-        <div className="relative px-6 lg:px-12 py-10 lg:py-14 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          {/* Left */}
-          <div className="flex flex-col gap-4 max-w-lg">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-nbl-orange" />
-              <p className="text-nbl-orange text-[10px] font-black tracking-widest uppercase">
-                Opportunité partenariat
-              </p>
-            </div>
-            <h2 className="font-akira text-4xl lg:text-5xl uppercase text-nbl-white leading-none">
-              Associez votre marque
-              <br />
-              <span className="text-nbl-orange">à l&apos;édition 1.</span>
-            </h2>
-            <p className="text-nbl-gray text-sm leading-relaxed">
-              Visibilité terrain, communication digitale, accès VIP. Soyez
-              présent dès le lancement du premier grand tournoi de street
-              basketball d&apos;Abidjan.
+      {/* Watermark text */}
+      <span
+        aria-hidden
+        className="hidden lg:block absolute -top-4 right-0 font-kianda text-[180px] leading-none text-nbl-white/[0.025] select-none pointer-events-none tracking-tight"
+      >
+        2026
+      </span>
+
+      {/* Header */}
+      <div
+        data-gsap="heading"
+        className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8 lg:mb-10"
+      >
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-nbl-green" />
+            <p className="text-nbl-green text-[10px] font-black tracking-[0.25em] uppercase">
+              Ils nous soutiennent
             </p>
-
-            {/* Perks row */}
-            <div className="flex flex-wrap gap-2 mt-1">
-              {[
-                "Visibilité terrain",
-                "Réseaux sociaux",
-                "Accès VIP",
-                "Co-branding",
-              ].map((p) => (
-                <span
-                  key={p}
-                  className="px-3 py-1 rounded-full bg-nbl-surface/80 border border-nbl-border text-nbl-gray text-xs font-semibold"
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
           </div>
+          <h2 className="font-kianda text-4xl lg:text-5xl text-nbl-white leading-[0.9] tracking-tight">
+            sponsors &amp; <span className="text-nbl-orange">partenaires</span>
+          </h2>
+        </div>
+        <p className="text-nbl-gray text-xs lg:text-sm max-w-xs leading-relaxed">
+          Les marques qui rendent possible la première édition du tournoi NBL à
+          Abidjan.
+        </p>
+      </div>
 
-          {/* Right */}
-          <div className="flex flex-col gap-3 shrink-0">
-            <Link
-              href="/partenaires"
-              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-nbl-orange text-nbl-bg font-akira text-2xl uppercase shadow-[0_4px_24px_rgba(217,104,19,0.45)] hover:bg-nbl-orange-dark active:scale-[0.97] transition-all"
-            >
-              Devenir partenaire
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
-            <a
-              href="mailto:nationalbasketballleaders1@gmail.com"
-              className="text-center text-nbl-gray text-xs hover:text-nbl-white transition-colors"
-            >
-              nationalbasketballleaders1@gmail.com
-            </a>
+      {/* Featured / Partenaire principal */}
+      {principal && (
+        <div data-gsap="cards" className="mb-4">
+          <div
+            data-gsap="card"
+            data-gsap-parent="sponsors-principal"
+            className="group relative rounded-3xl overflow-hidden border border-nbl-border bg-nbl-surface"
+          >
+            {/* Layered background */}
+            <div className="absolute inset-0 bg-linear-to-br from-nbl-orange/[0.08] via-transparent to-nbl-green/[0.06]" />
+            <div
+              className="absolute inset-0 opacity-[0.05] pointer-events-none"
+              style={{
+                backgroundImage: "url('/patern/patern_2.png')",
+                backgroundSize: "200px",
+                backgroundRepeat: "repeat",
+              }}
+            />
+            {/* Glow */}
+            <div className="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-nbl-orange/15 blur-[90px] pointer-events-none transition-opacity duration-700 group-hover:opacity-150" />
+
+            {/* Diagonal court stripe */}
+            <div
+              aria-hidden
+              className="absolute inset-y-0 right-0 w-1/2 lg:w-2/5 opacity-[0.04] pointer-events-none"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(135deg, var(--nbl-white) 0 1px, transparent 1px 14px)",
+              }}
+            />
+
+            <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto] items-stretch">
+              {/* Left — meta */}
+              <div className="p-6 lg:p-10 flex flex-col justify-between gap-6 lg:gap-10 order-2 lg:order-1">
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <Sparkles size={12} className="text-nbl-orange" />
+                    <span className="text-nbl-orange text-[10px] font-black tracking-[0.3em] uppercase">
+                      Partenaire principal
+                    </span>
+                  </div>
+                  <h3 className="font-kianda text-3xl lg:text-5xl text-nbl-white leading-[0.95] tracking-tight">
+                    {principal.name}
+                  </h3>
+                  {principal.tagline && (
+                    <p className="text-nbl-gray text-sm leading-relaxed max-w-md">
+                      {principal.tagline}. Présent sur le terrain, en tribune et
+                      tout au long de la NBL Party.
+                    </p>
+                  )}
+                </div>
+
+                {/* Perk pills */}
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Naming court",
+                    "Tribune VIP",
+                    "Branding maillots",
+                    "Activation NBL Party",
+                  ].map((p) => (
+                    <span
+                      key={p}
+                      className="px-3 py-1 rounded-full border border-nbl-border bg-nbl-bg/40 text-nbl-gray text-[11px] font-semibold tracking-wide"
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right — logo */}
+              <div className="relative order-1 lg:order-2 lg:w-80 xl:w-96 min-h-56 lg:min-h-full flex items-center justify-center p-8 lg:p-12 border-b lg:border-b-0 lg:border-l border-nbl-border bg-nbl-white/[0.02]">
+                {/* Corner ticks */}
+                <span className="absolute top-3 left-3 w-4 h-px bg-nbl-orange/60" />
+                <span className="absolute top-3 left-3 w-px h-4 bg-nbl-orange/60" />
+                <span className="absolute bottom-3 right-3 w-4 h-px bg-nbl-orange/60" />
+                <span className="absolute bottom-3 right-3 w-px h-4 bg-nbl-orange/60" />
+
+                <Image
+                  src={principal.logo}
+                  alt={principal.name}
+                  width={320}
+                  height={200}
+                  className="relative max-h-32 lg:max-h-40 w-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
           </div>
         </div>
+      )}
+
+      {/* Partenaires officiels grid (vide pour l'instant — affiché si présents) */}
+      {officiels.length > 0 && (
+        <div
+          data-gsap="cards"
+          className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3"
+        >
+          {officiels.map((s, i) => {
+            const Wrapper: React.ElementType = s.href ? Link : "div";
+            const wrapperProps = s.href ? { href: s.href } : {};
+            return (
+              <Wrapper
+                key={`${s.name}-${i}`}
+                {...wrapperProps}
+                data-gsap="card"
+                data-gsap-parent="sponsors-grid"
+                className="group relative aspect-[3/2] rounded-xl border border-nbl-border bg-nbl-surface flex items-center justify-center p-4 hover:border-nbl-orange/40 hover:bg-nbl-surface-raised transition-all"
+              >
+                <Image
+                  src={s.logo}
+                  alt={s.name}
+                  width={160}
+                  height={100}
+                  className="max-h-14 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                />
+              </Wrapper>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Lien Devenir partenaire */}
+      <div
+        data-gsap="fade-up"
+        className="mt-8 flex items-center justify-center gap-3"
+      >
+        <span className="h-px flex-1 max-w-16 bg-nbl-border" />
+        <Link
+          href="/partenaires"
+          className="group inline-flex items-center gap-2 text-nbl-orange font-kianda text-xl lg:text-2xl tracking-tight hover:text-nbl-white transition-colors"
+        >
+          Devenir partenaire
+          <ArrowRight
+            size={16}
+            className="transition-transform group-hover:translate-x-1"
+          />
+        </Link>
+        <span className="h-px flex-1 max-w-16 bg-nbl-border" />
       </div>
+
+      {/* Court line — bottom */}
+      <div className="mt-10 h-px bg-linear-to-r from-transparent via-nbl-border to-transparent" />
     </section>
   );
 }
@@ -293,8 +415,8 @@ export function HomeNews() {
   return (
     <section className="px-4 lg:px-0 pb-28 lg:pb-16">
       <div data-gsap="heading" className="flex items-end justify-between mb-6">
-        <h2 className="font-barlow font-bold text-3xl lg:text-4xl uppercase text-nbl-white leading-none">
-          Dernières Nouvelles
+        <h2 className="font-kianda text-3xl lg:text-4xl text-nbl-white leading-none tracking-tight">
+          dernières nouvelles
         </h2>
       </div>
       <div data-gsap="cards" className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -359,8 +481,8 @@ export function HomeMatches() {
   return (
     <section className="px-4 lg:px-0 py-8">
       <div data-gsap="heading" className="flex items-end justify-between mb-5">
-        <h2 className="font-barlow font-bold text-3xl lg:text-4xl uppercase text-nbl-white leading-none">
-          Prochains Matchs
+        <h2 className="font-kianda text-3xl lg:text-4xl text-nbl-white leading-none tracking-tight">
+          prochains matchs
         </h2>
         <Link
           href="/matches"

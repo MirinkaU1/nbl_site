@@ -29,7 +29,7 @@ export default function ContactPage() {
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
             National Basketball Leaders
           </p>
-          <h1 className="font-nbl text-4xl lg:text-5xl uppercase text-nbl-white leading-none mb-3">
+          <h1 className="font-kianda text-4xl lg:text-5xl text-nbl-white leading-[0.9] tracking-tight mb-3">
             Nous
             <br />
             <span className="text-nbl-orange">contacter</span>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                     Abidjan, Côte d&apos;Ivoire
                   </p>
                   <p className="text-nbl-gray text-xs">
-                    Juillet 2026 · Édition 1
+                    11 Août 2026 · Édition 1
                   </p>
                 </div>
               </div>

@@ -41,7 +41,7 @@ function NBLLogoSmall() {
   return (
     <Link href="/" className="shrink-0">
       <Image
-        src="/logo/logo_large.jpeg"
+        src="/logo/logo.png"
         alt="NBL"
         width={80}
         height={34}
@@ -153,7 +153,7 @@ export function SiteFooter() {
                 <span>Abidjan, Côte d&apos;Ivoire</span>
               </div>
               <p className="text-xs font-black text-nbl-white tracking-wide">
-                Juillet 2026 · Entrée Gratuite
+                11 Août 2026 · Entrée Gratuite
               </p>
               <Link
                 href="/inscription"

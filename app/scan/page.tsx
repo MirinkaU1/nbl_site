@@ -8,7 +8,7 @@ export default function ScanPage() {
         <QrCode size={32} className="text-nbl-bg" />
       </div>
       <div className="text-center">
-        <h1 className="text-2xl font-black uppercase text-nbl-white">Scanner un billet</h1>
+        <h1 className="font-kianda text-3xl text-nbl-white tracking-tight">Scanner un billet</h1>
         <p className="text-nbl-gray text-sm mt-2 leading-relaxed">Autorisez l&apos;accès à votre caméra pour scanner votre billet d&apos;entrée.</p>
       </div>
       <button className="flex items-center justify-center w-full max-w-xs py-4 rounded-2xl bg-nbl-orange text-nbl-bg font-black text-sm tracking-widest uppercase shadow-[0_4px_20px_rgba(217,104,19,0.4)]">

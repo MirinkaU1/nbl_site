@@ -174,7 +174,7 @@ export default function PlayerProfilePage({
                     </span>
                   )}
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-black uppercase leading-tight text-nbl-white tracking-tight">
+                <h1 className="font-kianda text-4xl lg:text-5xl leading-[0.9] text-nbl-white tracking-tight">
                   {player.firstName}
                   <br />
                   <span className="text-nbl-orange">

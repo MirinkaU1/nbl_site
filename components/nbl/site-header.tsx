@@ -19,7 +19,7 @@ function NBLLogo() {
   return (
     <Link href="/" className="shrink-0">
       <Image
-        src="/logo/logo_large.jpeg"
+        src="/logo/logo.png"
         alt="NBL"
         width={96}
         height={40}

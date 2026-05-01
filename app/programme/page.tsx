@@ -8,14 +8,14 @@ const schedule = [
     endTime: "12h30",
     label: "Matchs de poules",
     description:
-      "Phase de groupes — Catégories Junior & D1 sur les deux terrains simultanément. Format 2 × 10 minutes par match.",
+      "Phase de groupes — Catégories Junior & D1 sur les deux terrains simultanément. Format 2 × 5 minutes par match.",
     icon: Zap,
     color: "orange",
     details: [
       "12 équipes Junior en compétition",
       "12 équipes D1 en compétition",
       "2 terrains simultanés",
-      "Format : 2 × 10 min / match",
+      "Format : 2 × 5 min / match",
     ],
   },
   {
@@ -36,7 +36,7 @@ const schedule = [
   {
     time: "14h00",
     endTime: "17h30",
-    label: "Phases finales",
+    label: "Playoff",
     description:
       "Les meilleures équipes s'affrontent pour le titre. Quarts de finale, demi-finales, et les deux grandes finales.",
     icon: Trophy,
@@ -74,7 +74,7 @@ export default function ProgrammePage() {
         {/* Header */}
         <div className="mb-10 lg:mb-14">
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
-            Édition 1 · Juillet 2026
+            Édition 1 · 11 Août 2026
           </p>
           <h1 className="font-kianda tracking-tight text-4xl lg:text-5xl text-nbl-white leading-none mb-3">
             Programme
@@ -128,7 +128,7 @@ export default function ProgrammePage() {
                       </span>
                     </div>
 
-                    <h2 className="font-barlow font-bold text-2xl lg:text-3xl uppercase text-nbl-white leading-none mb-2">
+                    <h2 className="font-kianda text-2xl lg:text-3xl text-nbl-white leading-none mb-2 tracking-tight">
                       {item.label}
                     </h2>
                     <p className="text-nbl-gray text-sm leading-relaxed mb-4 max-w-lg">
@@ -173,7 +173,7 @@ export default function ProgrammePage() {
             <p className="text-nbl-orange text-[10px] font-black tracking-widest uppercase">
               Format
             </p>
-            <p className="text-nbl-white font-black text-lg">2 × 10 min</p>
+            <p className="text-nbl-white font-black text-lg">2 × 5 min</p>
             <p className="text-nbl-gray text-xs leading-relaxed">
               Chaque match se joue en 2 mi-temps de 10 minutes. Catégories
               Junior & D1.

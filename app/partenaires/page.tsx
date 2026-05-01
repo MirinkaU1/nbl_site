@@ -41,7 +41,7 @@ export default function PartenairesPage() {
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
             National Basketball Leaders · Édition 1
           </p>
-          <h1 className="font-akira text-4xl lg:text-5xl uppercase text-nbl-white leading-none mb-3">
+          <h1 className="font-kianda text-4xl lg:text-5xl text-nbl-white leading-[0.9] tracking-tight mb-3">
             Devenez
             <br />
             <span className="text-nbl-orange">partenaire</span>
@@ -65,7 +65,7 @@ export default function PartenairesPage() {
               key={s.label}
               className="rounded-2xl bg-nbl-surface border border-nbl-border p-5 flex flex-col gap-1"
             >
-              <span className="font-barlow font-black text-2xl lg:text-3xl text-nbl-orange leading-none">
+              <span className="font-kianda text-2xl lg:text-3xl text-nbl-orange leading-none tracking-tight">
                 {s.value}
               </span>
               <span className="text-nbl-gray text-xs leading-snug">
@@ -77,8 +77,8 @@ export default function PartenairesPage() {
 
         {/* Benefits */}
         <div className="mb-12">
-          <h2 className="font-barlow font-bold text-2xl uppercase text-nbl-white mb-6">
-            Ce que vous gagnez
+          <h2 className="font-kianda text-2xl lg:text-3xl text-nbl-white mb-6 tracking-tight">
+            ce que vous gagnez
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {benefits.map((b) => {
@@ -116,8 +116,8 @@ export default function PartenairesPage() {
             }}
           />
           <div className="relative">
-            <h2 className="font-akira text-3xl lg:text-4xl uppercase text-nbl-white mb-2">
-              Interesse ?
+            <h2 className="font-kianda text-3xl lg:text-4xl text-nbl-white mb-2 tracking-tight">
+              intéressé ?
             </h2>
             <p className="text-nbl-gray text-sm max-w-md leading-relaxed">
               Contactez-nous pour discuter des opportunités de partenariat

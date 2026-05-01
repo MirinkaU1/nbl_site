@@ -542,8 +542,8 @@ export default function InscriptionPage() {
               <CheckCircle size={36} className="text-nbl-green" />
             </div>
             <div>
-              <h2 className="font-nbl text-3xl uppercase text-nbl-white mb-2">
-                Demande recue !
+              <h2 className="font-kianda text-3xl text-nbl-white mb-2 tracking-tight">
+                Demande reçue !
               </h2>
               <p className="text-nbl-gray text-sm leading-relaxed">
                 L'equipe{" "}
@@ -595,12 +595,12 @@ export default function InscriptionPage() {
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
-              Edition 1 · Juillet 2026
+              Edition 1 · 11 Août 2026
             </p>
-            <h1 className="font-akira text-4xl lg:text-5xl uppercase text-nbl-white leading-none mb-3">
+            <h1 className="font-kianda text-4xl lg:text-5xl text-nbl-white leading-[0.9] tracking-tight mb-3">
               Inscrire
               <br />
-              <span className="text-nbl-orange">mon equipe</span>
+              <span className="text-nbl-orange">mon équipe</span>
             </h1>
             <p className="text-nbl-gray text-sm leading-relaxed">
               Formulaire en 3 etapes pour une inscription claire, avec upload
