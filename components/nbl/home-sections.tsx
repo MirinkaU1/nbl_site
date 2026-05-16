@@ -52,7 +52,7 @@ export function HomeProgramme() {
       <div data-gsap="heading" className="flex items-end justify-between mb-6">
         <div>
           <p className="text-nbl-orange text-[10px] font-black tracking-widest uppercase mb-1">
-            11 Août 2026 · Abidjan
+            08 août 2026 · Abidjan
           </p>
           <h1 className="font-kianda text-3xl lg:text-4xl text-nbl-white leading-none tracking-tight">
             programme de la journée

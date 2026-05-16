@@ -595,7 +595,7 @@ export default function InscriptionPage() {
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
-              Edition 1 · 11 Août 2026
+              Edition 1 · 08 août 2026
             </p>
             <h1 className="font-kianda text-4xl lg:text-5xl text-nbl-white leading-[0.9] tracking-tight mb-3">
               Inscrire

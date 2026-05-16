@@ -94,7 +94,7 @@ export default function ContactPage() {
                     Abidjan, Côte d&apos;Ivoire
                   </p>
                   <p className="text-nbl-gray text-xs">
-                    11 Août 2026 · Édition 1
+                    08 août 2026 · Édition 1
                   </p>
                 </div>
               </div>

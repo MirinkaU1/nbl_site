@@ -74,7 +74,7 @@ export default function ProgrammePage() {
         {/* Header */}
         <div className="mb-10 lg:mb-14">
           <p className="text-nbl-orange text-xs font-black tracking-widest uppercase mb-2">
-            Édition 1 · 11 Août 2026
+            Édition 1 · 08 août 2026
           </p>
           <h1 className="font-kianda tracking-tight text-4xl lg:text-5xl text-nbl-white leading-none mb-3">
             Programme

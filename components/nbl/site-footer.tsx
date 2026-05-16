@@ -153,7 +153,7 @@ export function SiteFooter() {
                 <span>Abidjan, Côte d&apos;Ivoire</span>
               </div>
               <p className="text-xs font-black text-nbl-white tracking-wide">
-                11 Août 2026 · Entrée Gratuite
+                08 août 2026 · Entrée Gratuite
               </p>
               <Link
                 href="/inscription"

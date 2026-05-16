@@ -65,7 +65,7 @@ export function HomeHero() {
           <span className="w-px h-3 bg-nbl-border" />
           <Calendar size={11} className="text-nbl-orange" />
           <span className="text-xs font-semibold text-nbl-gray">
-            11 Août 2026
+            08 août 2026
           </span>
           <span className="w-px h-3 bg-nbl-border" />
           <MapPin size={11} className="text-nbl-green" />
